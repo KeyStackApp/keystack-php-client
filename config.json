@@ -1,0 +1,10 @@
+{
+  "invokerPackage" : "KeyStack\\Client",
+  "library": "psr-18",
+  "srcBasePath": "src",
+  "packageDescription": "KeyStack API",
+  "developerOrganization": "KeyStack",
+  "developerName": "KeyStack",
+  "developerOrganizationUrl": "https://www.keystack.com",
+  "variableNamingConvention": "camelCase"
+}
