@@ -1,6 +1,6 @@
 <?php
 /**
- * LicenseListTest
+ * LoginInputTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace KeyStackApp\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LicenseListTest Class Doc Comment
+ * LoginInputTest Class Doc Comment
  *
  * @category    Class
- * @description LicenseList
+ * @description LoginInput
  * @package     KeyStackApp\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LicenseListTest extends TestCase
+class LoginInputTest extends TestCase
 {
 
     /**
@@ -71,27 +71,18 @@ class LicenseListTest extends TestCase
     }
 
     /**
-     * Test "LicenseList"
+     * Test "LoginInput"
      */
-    public function testLicenseList()
+    public function testLoginInput()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "encryptedApiKey"
      */
-    public function testPropertyData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "meta"
-     */
-    public function testPropertyMeta()
+    public function testPropertyEncryptedApiKey()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

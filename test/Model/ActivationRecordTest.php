@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace KeyStack\Client\Test\Model;
+namespace KeyStackApp\Client\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description ActivationRecord
- * @package     KeyStack\Client
+ * @package     KeyStackApp\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

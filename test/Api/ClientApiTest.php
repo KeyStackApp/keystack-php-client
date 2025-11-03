@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace KeyStack\Client\Test\Api;
+namespace KeyStackApp\Client\Test\Api;
 
-use \KeyStack\Client\Configuration;
-use \KeyStack\Client\ApiException;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\Configuration;
+use \KeyStackApp\Client\ApiException;
+use \KeyStackApp\Client\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ClientApiTest Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -90,6 +90,18 @@ class ClientApiTest extends TestCase
      *
      */
     public function testDeactivateLicense()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for login
+     *
+     * .
+     *
+     */
+    public function testLogin()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

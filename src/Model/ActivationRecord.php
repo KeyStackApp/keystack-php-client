@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Model;
+namespace KeyStackApp\Client\Model;
 
 use \ArrayAccess;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\ObjectSerializer;
 
 /**
  * ActivationRecord Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

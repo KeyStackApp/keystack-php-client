@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Model;
+namespace KeyStackApp\Client\Model;
 
 use \ArrayAccess;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\ObjectSerializer;
 
 /**
  * ActivationList Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ActivationList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\KeyStack\Client\Model\ActivationRecord[]',
-        'meta' => '\KeyStack\Client\Model\ActivationListMeta'
+        'data' => '\KeyStackApp\Client\Model\ActivationRecord[]',
+        'meta' => '\KeyStackApp\Client\Model\ActivationListMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class ActivationList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \KeyStack\Client\Model\ActivationRecord[]
+     * @return \KeyStackApp\Client\Model\ActivationRecord[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class ActivationList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \KeyStack\Client\Model\ActivationRecord[] $data data
+     * @param \KeyStackApp\Client\Model\ActivationRecord[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ActivationList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets meta
      *
-     * @return \KeyStack\Client\Model\ActivationListMeta
+     * @return \KeyStackApp\Client\Model\ActivationListMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class ActivationList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets meta
      *
-     * @param \KeyStack\Client\Model\ActivationListMeta $meta meta
+     * @param \KeyStackApp\Client\Model\ActivationListMeta $meta meta
      *
      * @return self
      */

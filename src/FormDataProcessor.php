@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,20 +25,20 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client;
+namespace KeyStackApp\Client;
 
 use ArrayAccess;
 use DateTime;
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Message\StreamInterface;
 use SplFileObject;
-use KeyStack\Client\Model\ModelInterface;
+use KeyStackApp\Client\Model\ModelInterface;
 
 /**
  * FormDataProcessor Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

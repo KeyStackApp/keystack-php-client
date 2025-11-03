@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Model;
+namespace KeyStackApp\Client\Model;
 
 use \ArrayAccess;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\ObjectSerializer;
 
 /**
  * LicenseList Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class LicenseList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\KeyStack\Client\Model\LicenseRecord[]',
-        'meta' => '\KeyStack\Client\Model\LicenseListMeta'
+        'data' => '\KeyStackApp\Client\Model\LicenseRecord[]',
+        'meta' => '\KeyStackApp\Client\Model\LicenseListMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class LicenseList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \KeyStack\Client\Model\LicenseRecord[]
+     * @return \KeyStackApp\Client\Model\LicenseRecord[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class LicenseList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \KeyStack\Client\Model\LicenseRecord[] $data data
+     * @param \KeyStackApp\Client\Model\LicenseRecord[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class LicenseList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets meta
      *
-     * @return \KeyStack\Client\Model\LicenseListMeta
+     * @return \KeyStackApp\Client\Model\LicenseListMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class LicenseList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets meta
      *
-     * @param \KeyStack\Client\Model\LicenseListMeta $meta meta
+     * @param \KeyStackApp\Client\Model\LicenseListMeta $meta meta
      *
      * @return self
      */

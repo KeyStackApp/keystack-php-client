@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Model;
+namespace KeyStackApp\Client\Model;
 
 use \ArrayAccess;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\ObjectSerializer;
 
 /**
  * LicenseRecord Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,8 +64,8 @@ class LicenseRecord implements ModelInterface, ArrayAccess, \JsonSerializable
         'expiresAt' => '\DateTime',
         'createdAt' => '\DateTime',
         'updatedAt' => '\DateTime',
-        'history' => '\KeyStack\Client\Model\LicenseRecordHistoryInner[]',
-        'activations' => '\KeyStack\Client\Model\ActivationList'
+        'history' => '\KeyStackApp\Client\Model\LicenseRecordHistoryInner[]',
+        'activations' => '\KeyStackApp\Client\Model\ActivationList'
     ];
 
     /**
@@ -617,7 +617,7 @@ class LicenseRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets history
      *
-     * @return \KeyStack\Client\Model\LicenseRecordHistoryInner[]
+     * @return \KeyStackApp\Client\Model\LicenseRecordHistoryInner[]
      */
     public function getHistory()
     {
@@ -627,7 +627,7 @@ class LicenseRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets history
      *
-     * @param \KeyStack\Client\Model\LicenseRecordHistoryInner[] $history history
+     * @param \KeyStackApp\Client\Model\LicenseRecordHistoryInner[] $history history
      *
      * @return self
      */
@@ -644,7 +644,7 @@ class LicenseRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets activations
      *
-     * @return \KeyStack\Client\Model\ActivationList|null
+     * @return \KeyStackApp\Client\Model\ActivationList|null
      */
     public function getActivations()
     {
@@ -654,7 +654,7 @@ class LicenseRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets activations
      *
-     * @param \KeyStack\Client\Model\ActivationList|null $activations activations
+     * @param \KeyStackApp\Client\Model\ActivationList|null $activations activations
      *
      * @return self
      */

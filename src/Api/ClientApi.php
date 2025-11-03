@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Api;
+namespace KeyStackApp\Client\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -39,12 +39,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use KeyStack\Client\ApiException;
-use KeyStack\Client\Configuration;
-use KeyStack\Client\DebugPlugin;
-use KeyStack\Client\HeaderSelector;
-use KeyStack\Client\FormDataProcessor;
-use KeyStack\Client\ObjectSerializer;
+use KeyStackApp\Client\ApiException;
+use KeyStackApp\Client\Configuration;
+use KeyStackApp\Client\DebugPlugin;
+use KeyStackApp\Client\HeaderSelector;
+use KeyStackApp\Client\FormDataProcessor;
+use KeyStackApp\Client\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -59,7 +59,7 @@ use function sprintf;
  * ClientApi Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -177,11 +177,11 @@ class ClientApi
     /**
      * Operation activateLicense
      *
-     * @param  \KeyStack\Client\Model\ActivateLicense $activateLicense activateLicense (optional)
+     * @param  \KeyStackApp\Client\Model\ActivateLicense $activateLicense activateLicense (optional)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \KeyStack\Client\Model\ActivationResponse|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response
+     * @return \KeyStackApp\Client\Model\ActivationResponse|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response
      */
     public function activateLicense($activateLicense = null)
     {
@@ -192,11 +192,11 @@ class ClientApi
     /**
      * Operation activateLicenseWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\ActivateLicense $activateLicense (optional)
+     * @param  \KeyStackApp\Client\Model\ActivateLicense $activateLicense (optional)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \KeyStack\Client\Model\ActivationResponse|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \KeyStackApp\Client\Model\ActivationResponse|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateLicenseWithHttpInfo($activateLicense = null)
     {
@@ -232,25 +232,25 @@ class ClientApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ActivationResponse',
+                        '\KeyStackApp\Client\Model\ActivationResponse',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $request,
                         $response,
                     );
                 case 423:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $request,
                         $response,
                     );
@@ -271,7 +271,7 @@ class ClientApi
             }
 
             return $this->handleResponseWithDataType(
-                '\KeyStack\Client\Model\ActivationResponse',
+                '\KeyStackApp\Client\Model\ActivationResponse',
                 $request,
                 $response,
             );
@@ -280,7 +280,7 @@ class ClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ActivationResponse',
+                        '\KeyStackApp\Client\Model\ActivationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class ClientApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class ClientApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class ClientApi
                 case 423:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -319,7 +319,7 @@ class ClientApi
     /**
      * Operation activateLicenseAsync
      *
-     * @param  \KeyStack\Client\Model\ActivateLicense $activateLicense (optional)
+     * @param  \KeyStackApp\Client\Model\ActivateLicense $activateLicense (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -337,14 +337,14 @@ class ClientApi
     /**
      * Operation activateLicenseAsyncWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\ActivateLicense $activateLicense (optional)
+     * @param  \KeyStackApp\Client\Model\ActivateLicense $activateLicense (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function activateLicenseAsyncWithHttpInfo($activateLicense = null)
     {
-        $returnType = '\KeyStack\Client\Model\ActivationResponse';
+        $returnType = '\KeyStackApp\Client\Model\ActivationResponse';
         $request = $this->activateLicenseRequest($activateLicense);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -382,7 +382,7 @@ class ClientApi
     /**
      * Create request for operation 'activateLicense'
      *
-     * @param  \KeyStack\Client\Model\ActivateLicense $activateLicense (optional)
+     * @param  \KeyStackApp\Client\Model\ActivateLicense $activateLicense (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -464,11 +464,11 @@ class ClientApi
     /**
      * Operation deactivateLicense
      *
-     * @param  \KeyStack\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
+     * @param  \KeyStackApp\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \KeyStack\Client\Model\DeactivationResponse|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response
+     * @return \KeyStackApp\Client\Model\DeactivationResponse|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response
      */
     public function deactivateLicense($deactivateLicenseInput)
     {
@@ -479,11 +479,11 @@ class ClientApi
     /**
      * Operation deactivateLicenseWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
+     * @param  \KeyStackApp\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \KeyStack\Client\Model\DeactivationResponse|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \KeyStackApp\Client\Model\DeactivationResponse|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function deactivateLicenseWithHttpInfo($deactivateLicenseInput)
     {
@@ -519,25 +519,25 @@ class ClientApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\DeactivationResponse',
+                        '\KeyStackApp\Client\Model\DeactivationResponse',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $request,
                         $response,
                     );
                 case 423:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $request,
                         $response,
                     );
@@ -558,7 +558,7 @@ class ClientApi
             }
 
             return $this->handleResponseWithDataType(
-                '\KeyStack\Client\Model\DeactivationResponse',
+                '\KeyStackApp\Client\Model\DeactivationResponse',
                 $request,
                 $response,
             );
@@ -567,7 +567,7 @@ class ClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\DeactivationResponse',
+                        '\KeyStackApp\Client\Model\DeactivationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -575,7 +575,7 @@ class ClientApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -583,7 +583,7 @@ class ClientApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -591,7 +591,7 @@ class ClientApi
                 case 423:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -606,7 +606,7 @@ class ClientApi
     /**
      * Operation deactivateLicenseAsync
      *
-     * @param  \KeyStack\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
+     * @param  \KeyStackApp\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -624,14 +624,14 @@ class ClientApi
     /**
      * Operation deactivateLicenseAsyncWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
+     * @param  \KeyStackApp\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function deactivateLicenseAsyncWithHttpInfo($deactivateLicenseInput)
     {
-        $returnType = '\KeyStack\Client\Model\DeactivationResponse';
+        $returnType = '\KeyStackApp\Client\Model\DeactivationResponse';
         $request = $this->deactivateLicenseRequest($deactivateLicenseInput);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -669,7 +669,7 @@ class ClientApi
     /**
      * Create request for operation 'deactivateLicense'
      *
-     * @param  \KeyStack\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
+     * @param  \KeyStackApp\Client\Model\DeactivateLicenseInput $deactivateLicenseInput The input parameters. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -755,13 +755,274 @@ class ClientApi
     }
 
     /**
+     * Operation login
+     *
+     * @param  \KeyStackApp\Client\Model\LoginInput $loginInput The input parameters for the login endpoint. (required)
+     *
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \KeyStackApp\Client\Model\LoginOutput|\KeyStackApp\Client\Model\ValidateLicense401Response
+     */
+    public function login($loginInput)
+    {
+        list($response) = $this->loginWithHttpInfo($loginInput);
+        return $response;
+    }
+
+    /**
+     * Operation loginWithHttpInfo
+     *
+     * @param  \KeyStackApp\Client\Model\LoginInput $loginInput The input parameters for the login endpoint. (required)
+     *
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \KeyStackApp\Client\Model\LoginOutput|\KeyStackApp\Client\Model\ValidateLicense401Response, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function loginWithHttpInfo($loginInput)
+    {
+        $request = $this->loginRequest($loginInput);
+
+        try {
+            try {
+                $response = $this->httpClient->sendRequest($request);
+            } catch (HttpException $e) {
+                $response = $e->getResponse();
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $response->getStatusCode(),
+                        (string) $request->getUri()
+                    ),
+                    $request,
+                    $response,
+                    $e
+                );
+            } catch (ClientExceptionInterface $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $request,
+                    null,
+                    $e
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\KeyStackApp\Client\Model\LoginOutput',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $request,
+                    $response
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\KeyStackApp\Client\Model\LoginOutput',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\KeyStackApp\Client\Model\LoginOutput',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation loginAsync
+     *
+     * @param  \KeyStackApp\Client\Model\LoginInput $loginInput The input parameters for the login endpoint. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function loginAsync($loginInput)
+    {
+        return $this->loginAsyncWithHttpInfo($loginInput)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation loginAsyncWithHttpInfo
+     *
+     * @param  \KeyStackApp\Client\Model\LoginInput $loginInput The input parameters for the login endpoint. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function loginAsyncWithHttpInfo($loginInput)
+    {
+        $returnType = '\KeyStackApp\Client\Model\LoginOutput';
+        $request = $this->loginRequest($loginInput);
+
+        return $this->httpAsyncClient->sendAsyncRequest($request)
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function (HttpException $exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $exception->getRequest(),
+                        $exception->getResponse(),
+                        $exception
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'login'
+     *
+     * @param  \KeyStackApp\Client\Model\LoginInput $loginInput The input parameters for the login endpoint. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return RequestInterface
+     */
+    public function loginRequest($loginInput)
+    {
+        // verify the required parameter 'loginInput' is set
+        if ($loginInput === null || (is_array($loginInput) && count($loginInput) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $loginInput when calling login'
+            );
+        }
+
+        $resourcePath = '/v1/login';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = null;
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json'],
+            'input',
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($loginInput)) {
+            if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($loginInput));
+            } else {
+                $httpBody = $loginInput;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
+                $httpBody = json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+
+        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
+
+        return $this->createRequest('POST', $uri, $headers, $httpBody);
+    }
+
+    /**
      * Operation manifestPublicRead
      *
      * @param  string $cacheKey cacheKey (required)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response
+     * @return object|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response
      */
     public function manifestPublicRead($cacheKey)
     {
@@ -774,9 +1035,9 @@ class ClientApi
      *
      * @param  string $cacheKey (required)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function manifestPublicReadWithHttpInfo($cacheKey)
     {
@@ -818,19 +1079,19 @@ class ClientApi
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $request,
                         $response,
                     );
                 case 423:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $request,
                         $response,
                     );
@@ -868,7 +1129,7 @@ class ClientApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -876,7 +1137,7 @@ class ClientApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +1145,7 @@ class ClientApi
                 case 423:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1052,11 +1313,11 @@ class ClientApi
     /**
      * Operation validateLicense
      *
-     * @param  \KeyStack\Client\Model\ValidateLicenseRequest $validateLicenseRequest validateLicenseRequest (optional)
+     * @param  \KeyStackApp\Client\Model\ValidateLicenseRequest $validateLicenseRequest validateLicenseRequest (optional)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \KeyStack\Client\Model\LicenseKey|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response
+     * @return \KeyStackApp\Client\Model\LicenseKey|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response
      */
     public function validateLicense($validateLicenseRequest = null)
     {
@@ -1067,11 +1328,11 @@ class ClientApi
     /**
      * Operation validateLicenseWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
+     * @param  \KeyStackApp\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
      *
-     * @throws \KeyStack\Client\ApiException on non-2xx response
+     * @throws \KeyStackApp\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \KeyStack\Client\Model\LicenseKey|\KeyStack\Client\Model\ValidateLicense401Response|\KeyStack\Client\Model\ValidateLicense404Response|\KeyStack\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \KeyStackApp\Client\Model\LicenseKey|\KeyStackApp\Client\Model\ValidateLicense401Response|\KeyStackApp\Client\Model\ValidateLicense404Response|\KeyStackApp\Client\Model\ValidateLicense423Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateLicenseWithHttpInfo($validateLicenseRequest = null)
     {
@@ -1107,25 +1368,25 @@ class ClientApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\LicenseKey',
+                        '\KeyStackApp\Client\Model\LicenseKey',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $request,
                         $response,
                     );
                 case 423:
                     return $this->handleResponseWithDataType(
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $request,
                         $response,
                     );
@@ -1146,7 +1407,7 @@ class ClientApi
             }
 
             return $this->handleResponseWithDataType(
-                '\KeyStack\Client\Model\LicenseKey',
+                '\KeyStackApp\Client\Model\LicenseKey',
                 $request,
                 $response,
             );
@@ -1155,7 +1416,7 @@ class ClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\LicenseKey',
+                        '\KeyStackApp\Client\Model\LicenseKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1163,7 +1424,7 @@ class ClientApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense401Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1171,7 +1432,7 @@ class ClientApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense404Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1179,7 +1440,7 @@ class ClientApi
                 case 423:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\KeyStack\Client\Model\ValidateLicense423Response',
+                        '\KeyStackApp\Client\Model\ValidateLicense423Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1194,7 +1455,7 @@ class ClientApi
     /**
      * Operation validateLicenseAsync
      *
-     * @param  \KeyStack\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
+     * @param  \KeyStackApp\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1212,14 +1473,14 @@ class ClientApi
     /**
      * Operation validateLicenseAsyncWithHttpInfo
      *
-     * @param  \KeyStack\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
+     * @param  \KeyStackApp\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function validateLicenseAsyncWithHttpInfo($validateLicenseRequest = null)
     {
-        $returnType = '\KeyStack\Client\Model\LicenseKey';
+        $returnType = '\KeyStackApp\Client\Model\LicenseKey';
         $request = $this->validateLicenseRequest($validateLicenseRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1257,7 +1518,7 @@ class ClientApi
     /**
      * Create request for operation 'validateLicense'
      *
-     * @param  \KeyStack\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
+     * @param  \KeyStackApp\Client\Model\ValidateLicenseRequest $validateLicenseRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

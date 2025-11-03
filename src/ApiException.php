@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client;
+namespace KeyStackApp\Client;
 
 use Exception;
 use Http\Client\Exception\RequestException;
@@ -36,7 +36,7 @@ use Psr\Http\Message\ResponseInterface;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * LicenseListTest
+ * LoginOutputTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace KeyStackApp\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LicenseListTest Class Doc Comment
+ * LoginOutputTest Class Doc Comment
  *
  * @category    Class
- * @description LicenseList
+ * @description LoginOutput
  * @package     KeyStackApp\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LicenseListTest extends TestCase
+class LoginOutputTest extends TestCase
 {
 
     /**
@@ -71,27 +71,18 @@ class LicenseListTest extends TestCase
     }
 
     /**
-     * Test "LicenseList"
+     * Test "LoginOutput"
      */
-    public function testLicenseList()
+    public function testLoginOutput()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "jwtToken"
      */
-    public function testPropertyData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "meta"
-     */
-    public function testPropertyMeta()
+    public function testPropertyJwtToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

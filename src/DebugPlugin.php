@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client;
+namespace KeyStackApp\Client;
 
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
@@ -39,7 +39,7 @@ use function is_resource;
  * PHP version 7.2
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

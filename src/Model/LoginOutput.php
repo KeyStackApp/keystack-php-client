@@ -1,6 +1,6 @@
 <?php
 /**
- * DeactivationResponse
+ * LoginOutput
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \KeyStackApp\Client\ObjectSerializer;
 
 /**
- * DeactivationResponse Class Doc Comment
+ * LoginOutput Class Doc Comment
  *
  * @category Class
  * @package  KeyStackApp\Client
@@ -40,7 +40,7 @@ use \KeyStackApp\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class LoginOutput implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DeactivationResponse';
+    protected static $openAPIModelName = 'LoginOutput';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'success' => 'bool',
-        'activationId' => 'string',
-        'status' => 'string'
+        'jwtToken' => 'string'
     ];
 
     /**
@@ -70,9 +68,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'success' => null,
-        'activationId' => null,
-        'status' => null
+        'jwtToken' => null
     ];
 
     /**
@@ -81,9 +77,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'success' => false,
-        'activationId' => false,
-        'status' => false
+        'jwtToken' => false
     ];
 
     /**
@@ -172,9 +166,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'success' => 'success',
-        'activationId' => 'activationId',
-        'status' => 'status'
+        'jwtToken' => 'jwtToken'
     ];
 
     /**
@@ -183,9 +175,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'success' => 'setSuccess',
-        'activationId' => 'setActivationId',
-        'status' => 'setStatus'
+        'jwtToken' => 'setJwtToken'
     ];
 
     /**
@@ -194,9 +184,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'success' => 'getSuccess',
-        'activationId' => 'getActivationId',
-        'status' => 'getStatus'
+        'jwtToken' => 'getJwtToken'
     ];
 
     /**
@@ -240,21 +228,6 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
-    public const STATUS_REMOVED = 'removed';
-    public const STATUS_REVOKED = 'revoked';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_REMOVED,
-            self::STATUS_REVOKED,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -271,9 +244,7 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('success', $data ?? [], null);
-        $this->setIfExists('activationId', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('jwtToken', $data ?? [], null);
     }
 
     /**
@@ -303,24 +274,9 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['success'] === null) {
-            $invalidProperties[] = "'success' can't be null";
+        if ($this->container['jwtToken'] === null) {
+            $invalidProperties[] = "'jwtToken' can't be null";
         }
-        if ($this->container['activationId'] === null) {
-            $invalidProperties[] = "'activationId' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -337,92 +293,28 @@ class DeactivationResponse implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets success
-     *
-     * @return bool
-     */
-    public function getSuccess()
-    {
-        return $this->container['success'];
-    }
-
-    /**
-     * Sets success
-     *
-     * @param bool $success success
-     *
-     * @return self
-     */
-    public function setSuccess($success)
-    {
-        if (is_null($success)) {
-            throw new \InvalidArgumentException('non-nullable success cannot be null');
-        }
-        $this->container['success'] = $success;
-
-        return $this;
-    }
-
-    /**
-     * Gets activationId
+     * Gets jwtToken
      *
      * @return string
      */
-    public function getActivationId()
+    public function getJwtToken()
     {
-        return $this->container['activationId'];
+        return $this->container['jwtToken'];
     }
 
     /**
-     * Sets activationId
+     * Sets jwtToken
      *
-     * @param string $activationId activationId
+     * @param string $jwtToken jwtToken
      *
      * @return self
      */
-    public function setActivationId($activationId)
+    public function setJwtToken($jwtToken)
     {
-        if (is_null($activationId)) {
-            throw new \InvalidArgumentException('non-nullable activationId cannot be null');
+        if (is_null($jwtToken)) {
+            throw new \InvalidArgumentException('non-nullable jwtToken cannot be null');
         }
-        $this->container['activationId'] = $activationId;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
+        $this->container['jwtToken'] = $jwtToken;
 
         return $this;
     }

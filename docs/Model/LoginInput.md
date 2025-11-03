@@ -1,10 +1,9 @@
-# # LicenseList
+# # LoginInput
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\KeyStackApp\Client\Model\LicenseRecord[]**](LicenseRecord.md) |  |
-**meta** | [**\KeyStackApp\Client\Model\LicenseListMeta**](LicenseListMeta.md) |  |
+**encryptedApiKey** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

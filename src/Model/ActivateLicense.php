@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace KeyStack\Client\Model;
+namespace KeyStackApp\Client\Model;
 
 use \ArrayAccess;
-use \KeyStack\Client\ObjectSerializer;
+use \KeyStackApp\Client\ObjectSerializer;
 
 /**
  * ActivateLicense Class Doc Comment
  *
  * @category Class
  * @description License activation input
- * @package  KeyStack\Client
+ * @package  KeyStackApp\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ActivateLicense implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'licenseKey' => 'string',
-        'fingerprint' => '\KeyStack\Client\Model\ActivateLicenseFingerprint'
+        'fingerprint' => '\KeyStackApp\Client\Model\ActivateLicenseFingerprint'
     ];
 
     /**
@@ -333,7 +333,7 @@ class ActivateLicense implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fingerprint
      *
-     * @return \KeyStack\Client\Model\ActivateLicenseFingerprint
+     * @return \KeyStackApp\Client\Model\ActivateLicenseFingerprint
      */
     public function getFingerprint()
     {
@@ -343,7 +343,7 @@ class ActivateLicense implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fingerprint
      *
-     * @param \KeyStack\Client\Model\ActivateLicenseFingerprint $fingerprint fingerprint
+     * @param \KeyStackApp\Client\Model\ActivateLicenseFingerprint $fingerprint fingerprint
      *
      * @return self
      */

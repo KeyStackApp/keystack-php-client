@@ -1,4 +1,4 @@
-# KeyStack\Client\ClientApi
+# KeyStackApp\Client\ClientApi
 
 All URIs are relative to http://localhost.
 
@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activateLicense()**](ClientApi.md#activateLicense) | **POST** /v1/licenses/activate | 
 [**deactivateLicense()**](ClientApi.md#deactivateLicense) | **POST** /v1/licenses/deactivate | 
+[**login()**](ClientApi.md#login) | **POST** /v1/login | 
 [**manifestPublicRead()**](ClientApi.md#manifestPublicRead) | **GET** /v1/manifest/public-read/{cacheKey} | 
 [**validateLicense()**](ClientApi.md#validateLicense) | **POST** /v1/licenses/validate | 
 
@@ -13,7 +14,7 @@ Method | HTTP request | Description
 ## `activateLicense()`
 
 ```php
-activateLicense($activateLicense): \KeyStack\Client\Model\ActivationResponse
+activateLicense($activateLicense): \KeyStackApp\Client\Model\ActivationResponse
 ```
 
 
@@ -26,16 +27,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: Bearer
-$config = KeyStack\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = KeyStackApp\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new KeyStack\Client\Api\ClientApi(
+$apiInstance = new KeyStackApp\Client\Api\ClientApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$activateLicense = new \KeyStack\Client\Model\ActivateLicense(); // \KeyStack\Client\Model\ActivateLicense
+$activateLicense = new \KeyStackApp\Client\Model\ActivateLicense(); // \KeyStackApp\Client\Model\ActivateLicense
 
 try {
     $result = $apiInstance->activateLicense($activateLicense);
@@ -49,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activateLicense** | [**\KeyStack\Client\Model\ActivateLicense**](../Model/ActivateLicense.md)|  | [optional]
+ **activateLicense** | [**\KeyStackApp\Client\Model\ActivateLicense**](../Model/ActivateLicense.md)|  | [optional]
 
 ### Return type
 
-[**\KeyStack\Client\Model\ActivationResponse**](../Model/ActivationResponse.md)
+[**\KeyStackApp\Client\Model\ActivationResponse**](../Model/ActivationResponse.md)
 
 ### Authorization
 
@@ -71,7 +72,7 @@ Name | Type | Description  | Notes
 ## `deactivateLicense()`
 
 ```php
-deactivateLicense($deactivateLicenseInput): \KeyStack\Client\Model\DeactivationResponse
+deactivateLicense($deactivateLicenseInput): \KeyStackApp\Client\Model\DeactivationResponse
 ```
 
 
@@ -84,16 +85,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: Bearer
-$config = KeyStack\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = KeyStackApp\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new KeyStack\Client\Api\ClientApi(
+$apiInstance = new KeyStackApp\Client\Api\ClientApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$deactivateLicenseInput = new \KeyStack\Client\Model\DeactivateLicenseInput(); // \KeyStack\Client\Model\DeactivateLicenseInput | The input parameters.
+$deactivateLicenseInput = new \KeyStackApp\Client\Model\DeactivateLicenseInput(); // \KeyStackApp\Client\Model\DeactivateLicenseInput | The input parameters.
 
 try {
     $result = $apiInstance->deactivateLicense($deactivateLicenseInput);
@@ -107,11 +108,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deactivateLicenseInput** | [**\KeyStack\Client\Model\DeactivateLicenseInput**](../Model/DeactivateLicenseInput.md)| The input parameters. |
+ **deactivateLicenseInput** | [**\KeyStackApp\Client\Model\DeactivateLicenseInput**](../Model/DeactivateLicenseInput.md)| The input parameters. |
 
 ### Return type
 
-[**\KeyStack\Client\Model\DeactivationResponse**](../Model/DeactivationResponse.md)
+[**\KeyStackApp\Client\Model\DeactivationResponse**](../Model/DeactivationResponse.md)
 
 ### Authorization
 
@@ -120,6 +121,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `login()`
+
+```php
+login($loginInput): \KeyStackApp\Client\Model\LoginOutput
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new KeyStackApp\Client\Api\ClientApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client()
+);
+$loginInput = new \KeyStackApp\Client\Model\LoginInput(); // \KeyStackApp\Client\Model\LoginInput | The input parameters for the login endpoint.
+
+try {
+    $result = $apiInstance->login($loginInput);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ClientApi->login: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **loginInput** | [**\KeyStackApp\Client\Model\LoginInput**](../Model/LoginInput.md)| The input parameters for the login endpoint. |
+
+### Return type
+
+[**\KeyStackApp\Client\Model\LoginOutput**](../Model/LoginOutput.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `input`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -142,7 +197,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new KeyStack\Client\Api\ClientApi(
+$apiInstance = new KeyStackApp\Client\Api\ClientApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client()
@@ -183,7 +238,7 @@ No authorization required
 ## `validateLicense()`
 
 ```php
-validateLicense($validateLicenseRequest): \KeyStack\Client\Model\LicenseKey
+validateLicense($validateLicenseRequest): \KeyStackApp\Client\Model\LicenseKey
 ```
 
 
@@ -196,16 +251,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: Bearer
-$config = KeyStack\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = KeyStackApp\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new KeyStack\Client\Api\ClientApi(
+$apiInstance = new KeyStackApp\Client\Api\ClientApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$validateLicenseRequest = new \KeyStack\Client\Model\ValidateLicenseRequest(); // \KeyStack\Client\Model\ValidateLicenseRequest
+$validateLicenseRequest = new \KeyStackApp\Client\Model\ValidateLicenseRequest(); // \KeyStackApp\Client\Model\ValidateLicenseRequest
 
 try {
     $result = $apiInstance->validateLicense($validateLicenseRequest);
@@ -219,11 +274,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **validateLicenseRequest** | [**\KeyStack\Client\Model\ValidateLicenseRequest**](../Model/ValidateLicenseRequest.md)|  | [optional]
+ **validateLicenseRequest** | [**\KeyStackApp\Client\Model\ValidateLicenseRequest**](../Model/ValidateLicenseRequest.md)|  | [optional]
 
 ### Return type
 
-[**\KeyStack\Client\Model\LicenseKey**](../Model/LicenseKey.md)
+[**\KeyStackApp\Client\Model\LicenseKey**](../Model/LicenseKey.md)
 
 ### Authorization
 
