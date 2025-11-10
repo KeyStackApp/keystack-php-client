@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activateLicense()**](ClientApi.md#activateLicense) | **POST** /v1/licenses/activate | 
 [**deactivateLicense()**](ClientApi.md#deactivateLicense) | **POST** /v1/licenses/deactivate | 
-[**login()**](ClientApi.md#login) | **POST** /v1/login | 
 [**manifestPublicRead()**](ClientApi.md#manifestPublicRead) | **GET** /v1/manifest/public-read/{cacheKey} | 
 [**validateLicense()**](ClientApi.md#validateLicense) | **POST** /v1/licenses/validate | 
 
@@ -121,60 +120,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `login()`
-
-```php
-login($loginInput): \KeyStackApp\Client\Model\LoginOutput
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new KeyStackApp\Client\Api\ClientApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client()
-);
-$loginInput = new \KeyStackApp\Client\Model\LoginInput(); // \KeyStackApp\Client\Model\LoginInput | The input parameters for the login endpoint.
-
-try {
-    $result = $apiInstance->login($loginInput);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ClientApi->login: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **loginInput** | [**\KeyStackApp\Client\Model\LoginInput**](../Model/LoginInput.md)| The input parameters for the login endpoint. |
-
-### Return type
-
-[**\KeyStackApp\Client\Model\LoginOutput**](../Model/LoginOutput.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: `input`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

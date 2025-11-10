@@ -96,18 +96,6 @@ class ClientApiTest extends TestCase
     }
 
     /**
-     * Test case for login
-     *
-     * .
-     *
-     */
-    public function testLogin()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for manifestPublicRead
      *
      * .
